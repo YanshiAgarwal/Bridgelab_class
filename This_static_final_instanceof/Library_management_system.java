@@ -1,14 +1,13 @@
 package This_static_final_instanceof;
 
 class Book {
-    static String libraryName = "City Library";   // static variable
+    static String libraryName = "City Library";   
     
     String title;
     String author;
-    final String isbn;   // final variable
+    final String isbn;   
 
     Book(String title, String author, String isbn) {
-        // using this to assign instance variables
         this.title = title;
         this.author = author;
         this.isbn = isbn;
@@ -19,7 +18,6 @@ class Book {
     }
 
     void showDetails() {
-        // instanceof check before displaying
         if (this instanceof Book) {
             System.out.println("Book: " + title + " , Author: " + author + " , ISBN: " + isbn);
         }
@@ -28,7 +26,6 @@ class Book {
 
 public class Library_management_system {
     public static void main(String[] args) {
-        // static method call
         Book.displayLibraryName();
 
         Book b1 = new Book("The Alchemist", "Paulo Coelho", "ISBN101");
@@ -38,4 +35,5 @@ public class Library_management_system {
         b2.showDetails();
     }
 }
+
 
